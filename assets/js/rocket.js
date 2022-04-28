@@ -117,9 +117,22 @@ function launch_rocket() {
 			"X-API-Key": "API_KEY_1",
 		},
 	};
+	$.blockUI({ message: '<h1>Just a moment...</h1>' });
+
 
 	$.ajax(settings).done(function (response) {
 		console.log(response);
+		$.unblockUI();
+
+	}).fail(function(xhr, status, error) {
+		$.unblockUI();
+		Swal.fire({
+			icon: 'error',
+			title: 'Oops...',
+			text: 'An error occurred while lifting the rocket, try again and again.!',
+		  })
+		  
+
 	});
 }
 
@@ -135,9 +148,19 @@ function deploy_rocket() {
 			"X-API-Key": "API_KEY_1",
 		},
 	};
+	$.blockUI({ message: '<h1>Just a moment...</h1>' });
 
 	$.ajax(settings).done(function (response) {
+		$.unblockUI();
+
 		console.log(response);
+	}).fail(function(xhr, status, error) {
+		$.unblockUI();
+		Swal.fire({
+			icon: 'error',
+			title: 'Oops...',
+			text: 'An error occurred while deploying the rocket, try again and again.!',
+		  })
 	});
 }
 
@@ -154,9 +177,22 @@ function cancel_launch() {
 			"X-API-Key": "API_KEY_1",
 		},
 	};
+	$.blockUI({ message: '<h1>Just a moment...</h1>' });
+
 
 	$.ajax(settings).done(function (response) {
 		console.log(response);
+		$.unblockUI();
+
+	}).fail(function(xhr, status, error) {
+		$.unblockUI();
+		Swal.fire({
+			icon: 'error',
+			title: 'Oops...',
+			text: 'An error occurred while stoping launch the rocket, try again and again.!',
+		  })
+		  
+
 	});
 }
 
