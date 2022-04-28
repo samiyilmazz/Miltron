@@ -12,5 +12,7 @@ Thats an MVC PHP (Codeigniter) project for rocket control interface. Coded for M
 Note: 
 
 -To avoid not working services i used Jquery with interval, so even if there is no response, it will send request again and again. 
+
 -To avoid services which is resposing wrong data is cleaned up in rockets.js and returned "invalid data".
+
 -To avoid infinity loop in sending request, added blockUI and inform user about last request is not successfull and try again message instead of sending request again.
