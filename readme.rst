@@ -3,9 +3,9 @@ Thats an MVC PHP (Codeigniter) project for rocket control interface. Coded for M
 -Models: Not used.
 
 -Views: Seperated to more little pieces
-
--includes/head -includes/scripts (Main page mostly works on this. I used javascript to render main page for more dynamic design like; Flames under rocket which is launched. And also API's are in here)
-.
+		-includes/head 
+		-includes/scripts (Main page mostly works on this. I used javascript to render main page for more dynamic design like; Flames under rocket which is launched. And also API's are in here).
+		
 -Controllers: Socket is here. Takes port number as parameter.
 
 
